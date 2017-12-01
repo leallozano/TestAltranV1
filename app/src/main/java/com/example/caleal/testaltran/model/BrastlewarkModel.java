@@ -17,7 +17,7 @@ public class BrastlewarkModel {
     int age;
     Double weight;
     Double height;
-    String hairColor;
+    String hair_color;
     List<String>  professions;
     //List<String>  friendsNames;
     List<String> friends;
@@ -27,14 +27,14 @@ public class BrastlewarkModel {
 
     }
 
-    public BrastlewarkModel(int id, String name, String thumbnail, int age, Double weight, Double height, String hairColor, List<String> professions, List<String> friends) {
+    public BrastlewarkModel(int id, String name, String thumbnail, int age, Double weight, Double height, String hair_color, List<String> professions, List<String> friends) {
         this.id = id;
         this.name = name;
         this.thumbnail = thumbnail;
         this.age = age;
         this.weight = weight;
         this.height = height;
-        this.hairColor = hairColor;
+        this.hair_color = hair_color;
         this.professions = professions;
         //this.friendsNames = friendsNames;
         this.friends = friends;
@@ -89,11 +89,11 @@ public class BrastlewarkModel {
     }
 
     public String getHairColor() {
-        return hairColor;
+        return hair_color;
     }
 
-    public void setHairColor(String hairColor) {
-        this.hairColor = hairColor;
+    public void setHairColor(String hair_color) {
+        this.hair_color = hair_color;
     }
 
     public List<String> getProfessions() {
@@ -111,129 +111,6 @@ public class BrastlewarkModel {
     public void setFriends(List<String> friends) {
         this.friends = friends;
     }
-
-/*public BrastlewarkModel(int userId, int id, String title, String body) {
-    this.userId = userId;
-    this.id = id;
-    this.title = title;
-    this.body = body;
-}
-
-    public BrastlewarkModel() {
-    }
-
-    private int id;
-    private int userId;
-    private String title;
-    private String body;
-
-    public int getUserId() { return this.userId; }
-
-    public void setUserId(int userId) { this.userId = userId; }
-
-    public int getId() { return this.id; }
-
-    public void setId(int id) { this.id = id; }
-
-    public String getTitle() { return this.title; }
-
-    public void setTitle(String title) { this.title = title; }
-
-    public String getBody() { return this.body; }
-
-    public void setBody(String body) { this.body = body; }*/
-
-
-   /* String id;
-    String name;
-    String photo;
-    String age;
-    String weight;
-    String height;
-    String hairColor;
-    List<String> professions;
-    List<String> friendsNames;
-    List<BrastlewarkModel> friends;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getWeight() {
-        return weight;
-    }
-
-    public void setWeight(String weight) {
-        this.weight = weight;
-    }
-
-    public String getHeight() {
-        return height;
-    }
-
-    public void setHeight(String height) {
-        this.height = height;
-    }
-
-    public String getHairColor() {
-        return hairColor;
-    }
-
-    public void setHairColor(String hairColor) {
-        this.hairColor = hairColor;
-    }
-
-    public List<String> getProfessions() {
-        return professions;
-    }
-
-    public void setProfessions(List<String> professions) {
-        this.professions = professions;
-    }
-
-    public List<String> getFriendsNames() {
-        return friendsNames;
-    }
-
-    public void setFriendsNames(List<String> friendsNames) {
-        this.friendsNames = friendsNames;
-    }
-
-    public List<BrastlewarkModel> getFriends() {
-        return friends;
-    }
-
-    public void setFriends(List<BrastlewarkModel> friends) {
-        this.friends = friends;
-    }*/
 
 
 }

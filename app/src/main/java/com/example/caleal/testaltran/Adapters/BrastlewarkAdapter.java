@@ -44,14 +44,12 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
     @Override
     public void onBindViewHolder(BrastlewarkAvilableViewHolder holder, final int position) {
 
-        //holder.Id.setText(String.valueOf(brastlewarkModelArrayList.get(position).getId()));
-        //holder.Id.setText(String.valueOf(brastlewarkModelArrayList.get(position).getBrastlewark().get(position).getId()));
-        //holder.Id.setText(String.valueOf(brastlewarkModelArrayList.get(position).getBrastlewark().get(position).getId()));
-        /*holder.name.setText(String.valueOf(brastlewarkModelArrayList.get(position).getName()));
-        holder.age.setText(brastlewarkModelArrayList.get(position).getAge());
+        holder.Id.setText(String.valueOf(brastlewarkModelArrayList.get(position).getId()));
+        holder.name.setText(String.valueOf(brastlewarkModelArrayList.get(position).getName()));
+        holder.age.setText(String.valueOf(brastlewarkModelArrayList.get(position).getAge()));
         holder.weight.setText(String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
         holder.height.setText(String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
-        holder.hair_color.setText(brastlewarkModelArrayList.get(position).getHairColor());*/
+        holder.hair_color.setText(String.valueOf(brastlewarkModelArrayList.get(position).getHairColor()));
 
         holder.name.setOnClickListener(new View.OnClickListener() {
             @Override

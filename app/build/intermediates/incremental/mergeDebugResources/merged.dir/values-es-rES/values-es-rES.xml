@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="age">Edad: </string>
+    <string name="app_name">TestAltran</string>
+    <string name="friends">Amigos: </string>
+    <string name="hair_color">Color de Cabello: </string>
+    <string name="height">Altura: </string>
+    <string name="id">ID: </string>
+    <string name="name">Nombre: </string>
+    <string name="professions">Profesiones: </string>
+    <string name="thumbnail">Foto: </string>
+    <string name="weight">Peso: </string>
+</resources>

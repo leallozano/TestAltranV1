@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class Brastlewark {
 
-    private ArrayList<BrastlewarkModel> Brastlewark;
+    private ArrayList<BrastlewarkModel> brastlewarkModel;
 
-    public ArrayList<BrastlewarkModel> getBrastlewark() { return this.Brastlewark; }
+    public ArrayList<BrastlewarkModel> getBrastlewark() { return brastlewarkModel; }
 
-    public void setBrastlewark(ArrayList<BrastlewarkModel> Brastlewark) { this.Brastlewark = Brastlewark; }
+    public void setBrastlewark(ArrayList<BrastlewarkModel> brastlewarkModel) { this.brastlewarkModel = brastlewarkModel; }
     }

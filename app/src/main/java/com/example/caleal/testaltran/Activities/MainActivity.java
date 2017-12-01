@@ -9,10 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.caleal.testaltran.Adapters.BrastlewarkAdapter;
 import com.example.caleal.testaltran.R;
 import com.example.caleal.testaltran.model.BrastlewarkModel;
 import com.example.caleal.testaltran.service.ServiceManager;
 import com.example.caleal.testaltran.service.callback.CallBackGetBrastlewark;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
@@ -20,8 +23,7 @@ import java.util.ArrayList;
 public class MainActivity extends BaseActivity {
 
     RecyclerView view_reciler;
-    ArrayList<BrastlewarkModel> arrayListBrastlewark = new ArrayList<BrastlewarkModel>();
-    //ArrayList<BrastlewarkModel> arrayListBrastlewark = new ArrayList<BrastlewarkModel>();
+
     private Toolbar toolbar;
 
     @Override
@@ -36,26 +38,23 @@ public class MainActivity extends BaseActivity {
         my_lienarlayout.setOrientation(LinearLayoutManager.VERTICAL);
         view_reciler.setLayoutManager(my_lienarlayout);
 
-        //ArrayList<BrastlewarkModel> brastlewarkModels = new ArrayList<BrastlewarkModel>();
+
         ServiceManager.getPost(new CallBackGetBrastlewark() {
-            @Override
+
             public void onSuccess(JsonObject brastlewarkModel) {
 
-                /*JsonObject jsonObject = brastlewarkModel;
-                Gson gson = new Gson();
-                for (Map.Entry<String,JsonElement> entry : jsonObject.entrySet()){
-                    Brastlewark bm;
-                    bm = gson.fromJson(entry.getValue().getAsJsonObject(), Brastlewark.class);
-                    //arrayListBrastlewark.add(bm);
-                    arrayListBrastlewark.add((BrastlewarkModel) bm.getBrastlewark());
+                ArrayList<BrastlewarkModel> arrayListBrastlewark = new ArrayList<>();
+                Gson mGson = new Gson();
+                //JSONArray jsonArray = new JSONArray(jsonMessage);//
+                JsonArray jsonArray = (brastlewarkModel.getAsJsonArray("Brastlewark"));
+                for(int i = 0; i< jsonArray.size();i++){
+                    BrastlewarkModel Bw =  mGson.fromJson(jsonArray.get(i).toString(), BrastlewarkModel.class);
+                    arrayListBrastlewark.add(Bw);
 
                 }
                 BrastlewarkAdapter mAdapter= new BrastlewarkAdapter(MainActivity.this,arrayListBrastlewark);
                 view_reciler.setAdapter(mAdapter);
-                //BrastlewarkAdapter mAdapterBrastlewark = new BrastlewarkAdapter(MainActivity.this,arrayListBrastlewark);
-                /*BrastlewarkAdapter mAdapterBrastlewark = new BrastlewarkAdapter(Brastlewark_data_activity.class,arrayListBrastlewark);
-                view_reciler.setAdapter(mAdapterBrastlewark);*/
-                Toast.makeText(MainActivity.this,"Esto trajo "+ String.valueOf(brastlewarkModel.size()),Toast.LENGTH_LONG).show();
+
             }
 
             @Override
