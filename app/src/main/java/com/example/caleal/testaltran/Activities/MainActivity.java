@@ -1,12 +1,16 @@
 package com.example.caleal.testaltran.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.caleal.testaltran.Adapters.BrastlewarkAdapter;
@@ -89,6 +93,14 @@ public class MainActivity extends BaseActivity {
 
     }
 
+
+
+
+    public void clickFilter() {
+        Intent intent = new Intent(this, BrastlewarkFilter.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean  onCreateOptionsMenu(Menu menu){
 
@@ -98,30 +110,18 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    public void ejecutar_class_inf(View v){
+    public void ejecutar_class_inf(){
 
-        //  Intent intenInf = new Intent(this,Inflate_Menu.class);
-        //  startActivity(intenInf);
+        /*Intent intenInf = new Intent(this,BrastlewarkFilter.class);
+        startActivity(intenInf);*/
+        ((MainActivity) this).openActivity(BrastlewarkFilter.class);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem option_item) {
 
-        int opcionMenu = option_item.getItemId();
+        startActivity(new Intent(this, BrastlewarkFilter.class));
 
-      /*  if (opcionMenu == R.id.tool_bar)
-        {
-            return  true;
-
-        }
-
-        if(opcionMenu == R.id.){
-
-           // ejecutar_class_inf(null);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(option_item);*/
-        return true;
+        return false;
     }
 }

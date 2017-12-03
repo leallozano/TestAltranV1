@@ -67,6 +67,8 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
                 bundle.putString("Height",String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
                 bundle.putString("HairColor",brastlewarkModelArrayList.get(position).getHairColor());
                 bundle.putString("Thumbnail",brastlewarkModelArrayList.get(position).getThumbnail());
+                bundle.putString("Professions", String.valueOf(brastlewarkModelArrayList.get(position).getProfessions()));
+                bundle.putString("Friends", String.valueOf(brastlewarkModelArrayList.get(position).getFriends()));
 
                 ((MainActivity) mContext).openActivity(Brastlewark_data_activity.class,bundle);
             }
@@ -94,6 +96,7 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
 
 
         View itemView;
+
         public BrastlewarkAvilableViewHolder(View itemView) {
 
             super(itemView);

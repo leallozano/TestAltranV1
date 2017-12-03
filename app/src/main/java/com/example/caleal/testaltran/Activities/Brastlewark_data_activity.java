@@ -22,6 +22,8 @@ public class Brastlewark_data_activity extends AppCompatActivity {
     TextView Height;
     TextView HairColor;
     ImageView Thumbnail;
+    TextView Professions;
+    TextView Friends;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +40,21 @@ public class Brastlewark_data_activity extends AppCompatActivity {
         Height = findViewById(R.id.height);
         HairColor = findViewById(R.id.hair_color);
         Thumbnail = findViewById(R.id.Photo);
+        Professions = findViewById(R.id.professions);
+        Friends = findViewById(R.id.friends);
+
 
         //Id.setText(datos.getString("Id"));
         Name.setText(datos.getString("Name"));
 
-        Age.setText(datos.getInt("Age"));
+        Age.setText(String.valueOf(datos.getInt("Age")));
         Weight.setText(datos.getString("Weight"));
         Height.setText(datos.getString("Height"));
         HairColor.setText(datos.getString("HairColor"));
-        //Thumbnail.setText(datos.getString("Thumbnail"));
+        HairColor.setText(datos.getString("HairColor"));
+        HairColor.setText(datos.getString("HairColor"));
+        Professions.setText(datos.getString("Professions"));
+        Friends.setText(datos.getString("Friends"));
 
         Picasso.with(this).load(datos.getString("Thumbnail")).resize(150, 200).into(Thumbnail);
 
