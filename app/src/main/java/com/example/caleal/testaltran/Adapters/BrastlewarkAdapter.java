@@ -52,20 +52,21 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
         holder.weight.setText("Weight: " +String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
         holder.height.setText("Height: " +String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
         holder.hair_color.setText("Hair Color: " +String.valueOf(brastlewarkModelArrayList.get(position).getHairColor()));
-        Picasso.with(mContext).load(brastlewarkModelArrayList.get(position).getThumbnail()).resize(200, 250).into(holder.backbg);
+        Picasso.with(mContext).load(brastlewarkModelArrayList.get(position).getThumbnail()).resize(150, 200).into(holder.Thumbnail);
 
 
-        holder.name.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Bundle bundle =new Bundle();
-                //bundle.putString("Id",String.valueOf(brastlewarkModelArrayList.get(position).getBrastlewark().get(position).getId()));
-                /*bundle.putString("Name",String.valueOf(brastlewarkModelArrayList.get(position).getName()));
+                bundle.putString("Id",String.valueOf(brastlewarkModelArrayList.get(position).getId()));
+                bundle.putString("Name",String.valueOf(brastlewarkModelArrayList.get(position).getName()));
                 bundle.putInt("Age", Integer.parseInt(String.valueOf(brastlewarkModelArrayList.get(position).getAge())));
                 bundle.putString("Weight",String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
                 bundle.putString("Height",String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
-                bundle.putString("HairColor",brastlewarkModelArrayList.get(position).getHairColor());*/
+                bundle.putString("HairColor",brastlewarkModelArrayList.get(position).getHairColor());
+                bundle.putString("Thumbnail",brastlewarkModelArrayList.get(position).getThumbnail());
 
                 ((MainActivity) mContext).openActivity(Brastlewark_data_activity.class,bundle);
             }
@@ -89,7 +90,7 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
         TextView weight;
         TextView height;
         TextView hair_color;
-        ImageView backbg;
+        ImageView Thumbnail;
 
 
         View itemView;
@@ -104,7 +105,7 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
             weight = itemView.findViewById(R.id.weight);
             height =itemView.findViewById(R.id.height);
             hair_color =itemView.findViewById(R.id.hair_color);
-            backbg = (ImageView) itemView.findViewById(R.id.ivPhoto);
+            Thumbnail = (ImageView) itemView.findViewById(R.id.Photo);
         }
     }
 

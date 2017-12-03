@@ -1,4 +1,4 @@
-#Sat Dec 02 19:27:17 VET 2017
+#Sun Dec 03 00:06:50 VET 2017
 base.0=C\:\\Users\\Carlos\\AndroidStudioProjects\\TestAltranV1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
 path.0=classes.dex
 renamed.0=classes.dex
