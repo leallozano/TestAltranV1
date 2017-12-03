@@ -47,6 +47,8 @@ public class MainActivity extends BaseActivity {
                 Gson mGson = new Gson();
                 //JSONArray jsonArray = new JSONArray(jsonMessage);//
                 JsonArray jsonArray = (brastlewarkModel.getAsJsonArray("Brastlewark"));
+                //Brastlewark B = null;
+               // JsonArray jsonArray = (brastlewarkModel.getAsJsonArray(B.getBrastlewark().toString()));
                 for(int i = 0; i< jsonArray.size();i++){
                     BrastlewarkModel Bw =  mGson.fromJson(jsonArray.get(i).toString(), BrastlewarkModel.class);
                     arrayListBrastlewark.add(Bw);

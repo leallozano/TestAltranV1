@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">TestAltran</string>
-    <string name="id">ID: </string>
-    <string name="name">Name: </string>
-    <string name="thumbnail">Photo: </string>
-    <string name="age">Age: </string>
-    <string name="weight">Weight: </string>
-    <string name="height">Height: </string>
-    <string name="hair_color">Hair Color: </string>
-    <string name="professions">Professions: </string>
-    <string name="friends">Friends: </string>
+    <string name="ID">ID: </string>
+    <string name="dos_jugadores">2 players</string>
+    <string name="facil">Easy</string>
+    <string name="normal">Average</string>
+    <string name="imposible">Insane</string>
+    <string name="casilla">Tile</string>
+    <string name="cirulos_ganan">Circles win!</string>
+    <string name="aspas_ganan">Crosses win !</string>
+    <string name="empate">Tie !</string>
+    <string name="gana">You Win !</string>
+    <string name="pierde">You Lose !</string>
+
+
 </resources>

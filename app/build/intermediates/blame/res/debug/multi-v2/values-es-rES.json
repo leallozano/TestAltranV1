@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\caleal\\AndroidStudioProjects\\TestAltranV1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rES\\values-es-rES.xml",
+            "outputFile": "C:\\Users\\Carlos\\AndroidStudioProjects\\TestAltranV1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rES\\values-es-rES.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\caleal\\AndroidStudioProjects\\TestAltranV1\\app\\src\\main\\res\\values-es-rES\\strings.xml",
+                    "source": "C:\\Users\\Carlos\\AndroidStudioProjects\\TestAltranV1\\app\\src\\main\\res\\values-es-rES\\strings.xml",
                     "from": {
-                        "startLines": "6,2,11,9,8,3,4,10,5,7",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "232,57,474,360,315,106,143,419,186,272",
-                        "endColumns": "38,47,44,57,43,35,41,53,44,41",
-                        "endOffsets": "266,100,514,413,354,137,180,468,226,309"
+                        "startLines": "3,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "4,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "106,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "endColumns": "36,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "endOffsets": "138,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,94,142,187,245,289,325,367,421,466",
-                        "endColumns": "38,47,44,57,43,35,41,53,44,41",
-                        "endOffsets": "89,137,182,240,284,320,362,416,461,503"
+                        "startOffsets": "55,92,131,179,224,282,326,368,422,467",
+                        "endColumns": "36,38,47,44,57,43,41,53,44,41",
+                        "endOffsets": "87,126,174,219,277,321,363,417,462,504"
                     }
                 }
             ]

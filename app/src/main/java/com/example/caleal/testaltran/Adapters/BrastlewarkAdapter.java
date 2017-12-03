@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.caleal.testaltran.Activities.Brastlewark_data_activity;
@@ -13,6 +14,7 @@ import com.example.caleal.testaltran.Activities.MainActivity;
 import com.example.caleal.testaltran.R;
 import com.example.caleal.testaltran.model.Brastlewark;
 import com.example.caleal.testaltran.model.BrastlewarkModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -41,15 +43,17 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
         return vh_brastlewark;
     }
 
-    @Override
+
     public void onBindViewHolder(BrastlewarkAvilableViewHolder holder, final int position) {
 
-        holder.Id.setText(String.valueOf(brastlewarkModelArrayList.get(position).getId()));
-        holder.name.setText(String.valueOf(brastlewarkModelArrayList.get(position).getName()));
-        holder.age.setText(String.valueOf(brastlewarkModelArrayList.get(position).getAge()));
-        holder.weight.setText(String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
-        holder.height.setText(String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
-        holder.hair_color.setText(String.valueOf(brastlewarkModelArrayList.get(position).getHairColor()));
+        holder.Id.setText("ID: " + String.valueOf(brastlewarkModelArrayList.get(position).getId()));
+        holder.name.setText("Name: " +String.valueOf(brastlewarkModelArrayList.get(position).getName()));
+        holder.age.setText("Age: " +String.valueOf(brastlewarkModelArrayList.get(position).getAge()));
+        holder.weight.setText("Weight: " +String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
+        holder.height.setText("Height: " +String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
+        holder.hair_color.setText("Hair Color: " +String.valueOf(brastlewarkModelArrayList.get(position).getHairColor()));
+        Picasso.with(mContext).load(brastlewarkModelArrayList.get(position).getThumbnail()).resize(200, 250).into(holder.backbg);
+
 
         holder.name.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +89,7 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
         TextView weight;
         TextView height;
         TextView hair_color;
-
+        ImageView backbg;
 
 
         View itemView;
@@ -100,7 +104,7 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
             weight = itemView.findViewById(R.id.weight);
             height =itemView.findViewById(R.id.height);
             hair_color =itemView.findViewById(R.id.hair_color);
-
+            backbg = (ImageView) itemView.findViewById(R.id.ivPhoto);
         }
     }
 
