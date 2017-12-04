@@ -119,7 +119,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
                 maxHeight = Double.parseDouble(etMaxHeight.getText().toString());
             }
 
-        if ((minAge > 0 && maxAge > 0 && maxAge > minAge) || (minHeight > 0.0 &&  maxHeight > 0.0 && minHeight < maxHeight) || (minWeight > 0.0 &&  maxWeight > 0.0 && minWeight<maxWeight )) {
+        if (name !="" || (minAge > 0 && maxAge > 0 && maxAge > minAge) || (minHeight > 0.0 &&  maxHeight > 0.0 && minHeight < maxHeight) || (minWeight > 0.0 &&  maxWeight > 0.0 && minWeight<maxWeight )) {
 
 
 
@@ -133,7 +133,10 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
                 for(int i = 0; i< jsonArray.size();i++){
                     BrastlewarkModel Bw =  mGson.fromJson(jsonArray.get(i).toString(), BrastlewarkModel.class);
-
+                    if (Bw.getName()!="" && Bw.getName().equalsIgnoreCase(name)) {
+                        arrayListBrastlewark.add(Bw);
+                        continue;
+                    }
                     if (String.valueOf(Bw.getAge()).toString()!="" && (Bw.getAge() >= minAge && Bw.getAge() <= maxAge ) &&( maxAge > minAge) ) {
                         arrayListBrastlewark.add(Bw);
                         continue;
