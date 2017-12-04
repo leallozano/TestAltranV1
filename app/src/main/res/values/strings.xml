@@ -1,16 +1,4 @@
 <resources>
-    <string name="app_name">TestAltran</string>
+    <string name="app_name">Brastlewark</string>
     <string name="ID">ID: </string>
-    <string name="dos_jugadores">2 players</string>
-    <string name="facil">Easy</string>
-    <string name="normal">Average</string>
-    <string name="imposible">Insane</string>
-    <string name="casilla">Tile</string>
-    <string name="cirulos_ganan">Circles win!</string>
-    <string name="aspas_ganan">Crosses win !</string>
-    <string name="empate">Tie !</string>
-    <string name="gana">You Win !</string>
-    <string name="pierde">You Lose !</string>
-
-
 </resources>
