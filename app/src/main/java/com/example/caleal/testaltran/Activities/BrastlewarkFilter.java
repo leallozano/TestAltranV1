@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.caleal.testaltran.Adapters.BrastlewarkAdapter;
+import com.example.caleal.testaltran.Adapters.FilterAdapter;
 import com.example.caleal.testaltran.R;
 import com.example.caleal.testaltran.model.BrastlewarkModel;
 import com.example.caleal.testaltran.service.constans.ClassConstans;
@@ -118,7 +119,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
                 maxHeight = Double.parseDouble(etMaxHeight.getText().toString());
             }
 
-        if (minAge > 0 || maxAge > 0 || minHeight > 0.0 || maxHeight > 0.0 || minWeight > 0.0 || maxWeight > 0.0) {
+        if ((minAge > 0 && maxAge > 0 && maxAge > minAge) || (minHeight > 0.0 &&  maxHeight > 0.0 && minHeight < maxHeight) || (minWeight > 0.0 &&  maxWeight > 0.0 && minWeight<maxWeight )) {
 
                 setContentView(R.layout.activity_main);
                 toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -139,23 +140,23 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
                 for(int i = 0; i< jsonArray.size();i++){
                     BrastlewarkModel Bw =  mGson.fromJson(jsonArray.get(i).toString(), BrastlewarkModel.class);
-                    if (String.valueOf(Bw.getAge()).toString()!="" && (Bw.getAge() >= minAge || Bw.getAge() <= maxAge ) ) {
+                    if (String.valueOf(Bw.getAge()).toString()!="" && (Bw.getAge() >= minAge && Bw.getAge() <= maxAge ) &&( maxAge > minAge) ) {
                         arrayListBrastlewark.add(Bw);
                         continue;
                     }
-                    if (String.valueOf(Bw.getHeight()).toString()!=""   && (Bw.getHeight() >= minHeight || Bw.getHeight() <= maxHeight)) {
+                    if (String.valueOf(Bw.getHeight()).toString()!=""   && (Bw.getHeight() >= minHeight && Bw.getHeight() <= maxHeight) && (minHeight < maxHeight)) {
                         arrayListBrastlewark.add(Bw);
                         continue;
                     }
-                    if (String.valueOf(Bw.getWeight()).toString()!="" && (Bw.getWeight() >= minWeight || Bw.getAge() <= maxWeight)) {
+                    if (String.valueOf(Bw.getWeight()).toString()!="" && (Bw.getWeight() >= minWeight && Bw.getAge() <= maxWeight) && (minWeight<maxWeight)) {
                         arrayListBrastlewark.add(Bw);
                         continue;
                     }
 
 
                 }
-                MainActivity a= new MainActivity();
-                BrastlewarkAdapter mAdapter= new BrastlewarkAdapter(a.mContext,arrayListBrastlewark);
+                //MainActivity a= new MainActivity();
+                FilterAdapter mAdapter= new FilterAdapter(this,arrayListBrastlewark);
                 view_reciler.setAdapter(mAdapter);
             }
         else {
