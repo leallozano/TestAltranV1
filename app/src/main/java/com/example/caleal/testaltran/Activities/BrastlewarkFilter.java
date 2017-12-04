@@ -160,7 +160,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
                 view_reciler.setAdapter(mAdapter);
             }
         else {
-            Toast.makeText(this,"Debe ingresar un valor",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Debe ingresar un valor. Ten en cuenta que se requiere ingresar el valor mínimo y máximo del mismo campo",Toast.LENGTH_LONG).show();
         }
 
 
