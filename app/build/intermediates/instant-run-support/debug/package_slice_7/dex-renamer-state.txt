@@ -1,4 +1,4 @@
-#Sun Dec 03 11:22:46 BOT 2017
-base.0=C\:\\Users\\caleal\\AndroidStudioProjects\\TestAltranV1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+#Sun Dec 03 14:37:02 VET 2017
+base.0=C\:\\Users\\Carlos\\AndroidStudioProjects\\TestAltranV1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,16 +1,13 @@
 package com.example.caleal.testaltran.Activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.caleal.testaltran.Adapters.BrastlewarkAdapter;
@@ -18,6 +15,7 @@ import com.example.caleal.testaltran.R;
 import com.example.caleal.testaltran.model.BrastlewarkModel;
 import com.example.caleal.testaltran.service.ServiceManager;
 import com.example.caleal.testaltran.service.callback.CallBackGetBrastlewark;
+import com.example.caleal.testaltran.service.constans.ClassConstans;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -25,9 +23,10 @@ import com.google.gson.JsonObject;
 import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
+    Context mContext;
 
     RecyclerView view_reciler;
-
+   //String Json;
     private Toolbar toolbar;
 
     @Override
@@ -36,7 +35,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         //setSupportActionBar(toolbar);
-
+        this.mContext = mContext;
         view_reciler =(RecyclerView) findViewById(R.id.Brastlewark_recycler);
         LinearLayoutManager my_lienarlayout = new LinearLayoutManager(this);
         my_lienarlayout.setOrientation(LinearLayoutManager.VERTICAL);
@@ -46,10 +45,9 @@ public class MainActivity extends BaseActivity {
         ServiceManager.getPost(new CallBackGetBrastlewark() {
 
             public void onSuccess(JsonObject brastlewarkModel) {
-
+                ClassConstans.Json=String.valueOf(brastlewarkModel);
                 ArrayList<BrastlewarkModel> arrayListBrastlewark = new ArrayList<>();
                 Gson mGson = new Gson();
-                //JSONArray jsonArray = new JSONArray(jsonMessage);//
                 JsonArray jsonArray = (brastlewarkModel.getAsJsonArray("Brastlewark"));
                 //Brastlewark B = null;
                // JsonArray jsonArray = (brastlewarkModel.getAsJsonArray(B.getBrastlewark().toString()));
@@ -97,8 +95,19 @@ public class MainActivity extends BaseActivity {
 
 
     public void clickFilter() {
-        Intent intent = new Intent(this, BrastlewarkFilter.class);
+        Intent intent = new Intent(mContext, BrastlewarkFilter.class);
+       // intent.putExtra("Json",Json);
+        //Bundle bundle =new Bundle();
+        //bundle.putString("Json", Json);
+        //((MainActivity) mContext).openActivity(BrastlewarkFilter.class,bundle);
+        //((MainActivity) this).openActivity(BrastlewarkFilter.class,bundle);
+        //((MainActivity) mContext).openActivity(Brastlewark_data_activity.class,bundle);
         startActivity(intent);
+
+        /*Intent activity = new Intent(this, BrastlewarkFilter.class);
+        activity.putExtra("myObject", new Gson().toJson(brastlewarkMode));
+        startActivity(activity);*/
+
     }
 
     @Override

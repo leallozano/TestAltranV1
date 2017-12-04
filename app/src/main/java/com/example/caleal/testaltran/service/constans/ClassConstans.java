@@ -7,5 +7,6 @@ package com.example.caleal.testaltran.service.constans;
 public class ClassConstans {
     //
     public static final String URL_ENDPOINT = "https://raw.githubusercontent.com/rrafols/mobile_test/master/";
+    public static String Json = null;
     //public static final String URL_ENDPOINT = "https://jsonplaceholder.typicode.com/";
 }
