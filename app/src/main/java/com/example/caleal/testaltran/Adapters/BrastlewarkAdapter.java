@@ -55,7 +55,7 @@ public class BrastlewarkAdapter extends RecyclerView.Adapter<BrastlewarkAdapter.
         Picasso.with(mContext).load(brastlewarkModelArrayList.get(position).getThumbnail()).resize(150, 200).into(holder.Thumbnail);
 
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener( ){
             @Override
             public void onClick(View v) {
 

@@ -48,12 +48,12 @@ public class BrastlewarkFilter extends AppCompatActivity {
     //btFilter
     Context mContext;
     String name = null;
-    Integer minAge = null;
-    Integer maxAge = null;
-    Double minWeight = null;
-    Double maxWeight = null;
-    Double minHeight = null;
-    Double maxHeight = null;
+    Integer minAge = 0;
+    Integer maxAge = 0;
+    Double minWeight = 0.0;
+    Double maxWeight = 0.0;
+    Double minHeight = 0.0;
+    Double maxHeight = 0.0;
     String Json;
 
    // Bundle datos = this.getIntent().getExtras();
@@ -64,7 +64,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
     }
 
 
-    @Override
+/*    @Override
     public boolean  onCreateOptionsMenu(Menu menu){
 
         getMenuInflater().inflate(R.menu.menu_example_activity,menu);
@@ -80,7 +80,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
         startActivity(new Intent(this, BrastlewarkFilter.class));
 
         return false;
-    }
+    }*/
 
     public void clickButton(View vista) {
 
@@ -102,48 +102,23 @@ public class BrastlewarkFilter extends AppCompatActivity {
             if (!etMinAge.getText().toString().equals("")) {
                 minAge = Integer.parseInt(etMinAge.getText().toString());
             }
-            else {
-                maxAge=0;
-            }
-
             if (!etMaxAge.getText().toString().equals("")) {
                 maxAge = Integer.parseInt(etMaxAge.getText().toString());
             }
-            else {
-             minAge =0;
-            }
-
             if (!etMinWeight.getText().toString().equals("")) {
                 minWeight = Double.parseDouble(etMinWeight.getText().toString());
             }
-            else {
-                maxWeight =0.0;
-            }
-
-
-
             if (!etMaxWeight.getText().toString().equals("")) {
                 maxWeight = Double.parseDouble(etMaxWeight.getText().toString());
             }
-            else {
-                minWeight =0.0;
-            }
-
             if (!etMinHeight.getText().toString().equals("")) {
                 minHeight = Double.parseDouble(etMinHeight.getText().toString());
             }
-            else {
-                maxHeight=0.0;
-            }
-
             if (!etMaxHeight.getText().toString().equals("")) {
                 maxHeight = Double.parseDouble(etMaxHeight.getText().toString());
             }
-            else {
-                minHeight =0.0;
-            }
 
-        if (minAge > 0 || maxAge > 0 || minHeight > 0 || maxHeight > 0 || minWeight > 0 || maxWeight > 0) {
+        if (minAge > 0 || maxAge > 0 || minHeight > 0.0 || maxHeight > 0.0 || minWeight > 0.0 || maxWeight > 0.0) {
 
                 setContentView(R.layout.activity_main);
                 toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -164,14 +139,17 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
                 for(int i = 0; i< jsonArray.size();i++){
                     BrastlewarkModel Bw =  mGson.fromJson(jsonArray.get(i).toString(), BrastlewarkModel.class);
-                    if (String.valueOf(Bw.getAge()).toString()!="" && Bw.getAge() >= minAge && Bw.getAge() <= maxAge  ) {
+                    if (String.valueOf(Bw.getAge()).toString()!="" && (Bw.getAge() >= minAge || Bw.getAge() <= maxAge ) ) {
                         arrayListBrastlewark.add(Bw);
+                        continue;
                     }
-                    if (String.valueOf(Bw.getHeight()).toString()!=""   && Bw.getHeight() >= Double.parseDouble(String.valueOf(minHeight)) && Bw.getHeight() <= Double.parseDouble(String.valueOf(maxHeight))) {
+                    if (String.valueOf(Bw.getHeight()).toString()!=""   && (Bw.getHeight() >= minHeight || Bw.getHeight() <= maxHeight)) {
                         arrayListBrastlewark.add(Bw);
+                        continue;
                     }
-                    if (String.valueOf(Bw.getWeight()).toString()!="" && Bw.getWeight() >= Double.parseDouble(String.valueOf(minWeight)) && Bw.getAge() <= Double.parseDouble(String.valueOf(maxWeight))) {
+                    if (String.valueOf(Bw.getWeight()).toString()!="" && (Bw.getWeight() >= minWeight || Bw.getAge() <= maxWeight)) {
                         arrayListBrastlewark.add(Bw);
+                        continue;
                     }
 
 
@@ -189,6 +167,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
 
     }
+
 
 
 }
