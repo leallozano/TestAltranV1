@@ -57,7 +57,7 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Brastlewar
         Picasso.with(mContext).load(brastlewarkModelArrayList.get(position).getThumbnail()).resize(150, 200).into(holder.Thumbnail);
 
 
-        holder.itemView.setOnClickListener(new View.OnClickListener( ){
+        /*holder.itemView.setOnClickListener(new View.OnClickListener( ){
             @Override
             public void onClick(View v) {
 
@@ -74,7 +74,7 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Brastlewar
 
                 ((MainActivity) mContext).openActivity(Brastlewark_data_activity.class,bundle);
             }
-        });
+        });*/
     }
 
 
