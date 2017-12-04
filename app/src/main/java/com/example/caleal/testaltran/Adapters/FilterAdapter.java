@@ -1,6 +1,7 @@
 package com.example.caleal.testaltran.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.caleal.testaltran.Activities.BrastlewarkFilter;
 import com.example.caleal.testaltran.Activities.Brastlewark_data_activity;
+import com.example.caleal.testaltran.Activities.Brastlewark_data_filter;
 import com.example.caleal.testaltran.Activities.MainActivity;
 import com.example.caleal.testaltran.R;
 import com.example.caleal.testaltran.model.Brastlewark;
@@ -57,24 +59,24 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.Brastlewar
         Picasso.with(mContext).load(brastlewarkModelArrayList.get(position).getThumbnail()).resize(150, 200).into(holder.Thumbnail);
 
 
-        /*holder.itemView.setOnClickListener(new View.OnClickListener( ){
+        holder.itemView.setOnClickListener(new View.OnClickListener( ){
             @Override
             public void onClick(View v) {
 
-                Bundle bundle =new Bundle();
-                bundle.putString("Id",String.valueOf(brastlewarkModelArrayList.get(position).getId()));
-                bundle.putString("Name",String.valueOf(brastlewarkModelArrayList.get(position).getName()));
-                bundle.putInt("Age", Integer.parseInt(String.valueOf(brastlewarkModelArrayList.get(position).getAge())));
-                bundle.putString("Weight",String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
-                bundle.putString("Height",String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
-                bundle.putString("HairColor",brastlewarkModelArrayList.get(position).getHairColor());
-                bundle.putString("Thumbnail",brastlewarkModelArrayList.get(position).getThumbnail());
-                bundle.putString("Professions", String.valueOf(brastlewarkModelArrayList.get(position).getProfessions()));
-                bundle.putString("Friends", String.valueOf(brastlewarkModelArrayList.get(position).getFriends()));
-
-                ((MainActivity) mContext).openActivity(Brastlewark_data_activity.class,bundle);
+                Intent bundle =new  Intent(mContext, Brastlewark_data_filter.class);
+                bundle.putExtra("Id",String.valueOf(brastlewarkModelArrayList.get(position).getId()));
+                bundle.putExtra("Name",String.valueOf(brastlewarkModelArrayList.get(position).getName()));
+                bundle.putExtra("Age", String.valueOf(brastlewarkModelArrayList.get(position).getAge()));
+                bundle.putExtra("Weight",String.valueOf(brastlewarkModelArrayList.get(position).getWeight()));
+                bundle.putExtra("Height",String.valueOf(brastlewarkModelArrayList.get(position).getHeight()));
+                bundle.putExtra("HairColor",brastlewarkModelArrayList.get(position).getHairColor());
+                bundle.putExtra("Thumbnail",brastlewarkModelArrayList.get(position).getThumbnail());
+                bundle.putExtra("Professions", String.valueOf(brastlewarkModelArrayList.get(position).getProfessions()));
+                bundle.putExtra("Friends", String.valueOf(brastlewarkModelArrayList.get(position).getFriends()));
+                mContext.startActivity(bundle);
+                //((MainActivity) mContext).openActivity(Brastlewark_data_activity.class,bundle);
             }
-        });*/
+        });
     }
 
 

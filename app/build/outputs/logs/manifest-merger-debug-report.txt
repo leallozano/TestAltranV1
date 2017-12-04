@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d55035e9031ce91ab7df3eb8eb5355af\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\53987365b230d41238914db74fe279c9\AndroidManifest.xml:2:1-11:12
 MERGED from [com.jakewharton:butterknife:8.6.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\butterknife-8.6.0.aar\5687031d950bf961bd75526003e8b404\AndroidManifest.xml:2:1-7:12
@@ -17,20 +17,20 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\caleal\.g
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3bbd8cddf56276d00b0fa6c85178f3ac\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\bf376e12b2034e3d391ecb52d9e0e389\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\26bdd59404bc45ba387aa4ffd3e99044\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:2:11-69
@@ -39,7 +39,7 @@ ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:6:5-26:19
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:6:5-27:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d55035e9031ce91ab7df3eb8eb5355af\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\d55035e9031ce91ab7df3eb8eb5355af\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\caleal\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\53987365b230d41238914db74fe279c9\AndroidManifest.xml:9:5-20
@@ -84,28 +84,34 @@ ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\Andro
 		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:16:72-116
 	android:name
 		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:16:19-71
+activity#com.example.caleal.testaltran.Activities.Brastlewark_data_filter
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:17:9-116
+	android:theme
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:17:70-114
+	android:name
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:17:19-69
 activity#com.example.caleal.testaltran.Activities.BrastlewarkFilter
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:17:9-110
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:18:9-110
 	android:theme
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:17:64-108
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:18:64-108
 	android:name
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:17:19-63
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:18:19-63
 activity#com.example.caleal.testaltran.Activities.MainActivity
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:18:9-25:20
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:19:9-26:20
 	android:theme
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:18:59-103
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:19:59-103
 	android:name
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:18:19-58
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:19:19-58
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml:24:27-74
 uses-sdk
 INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\caleal\AndroidStudioProjects\TestAltranV1\app\src\main\AndroidManifest.xml

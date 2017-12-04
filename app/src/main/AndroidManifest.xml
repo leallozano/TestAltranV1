@@ -14,6 +14,7 @@
 
 
         <activity android:name=".Activities.Brastlewark_data_activity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name=".Activities.Brastlewark_data_filter" android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:name=".Activities.BrastlewarkFilter" android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:name=".Activities.MainActivity" android:theme="@style/Theme.AppCompat.Light">
 

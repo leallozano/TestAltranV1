@@ -24,6 +24,9 @@
             android:name="com.example.caleal.testaltran.Activities.Brastlewark_data_activity"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
+            android:name="com.example.caleal.testaltran.Activities.Brastlewark_data_filter"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
             android:name="com.example.caleal.testaltran.Activities.BrastlewarkFilter"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity

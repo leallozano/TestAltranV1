@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Dec 04 08:38:00 BOT 2017
+#Mon Dec 04 13:56:13 BOT 2017
 2.base=C\:\\Users\\caleal\\AndroidStudioProjects\\TestAltranV1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
 5.set=DEX
 0.path=classes.dex
