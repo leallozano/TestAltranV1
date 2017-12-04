@@ -121,14 +121,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
         if ((minAge > 0 && maxAge > 0 && maxAge > minAge) || (minHeight > 0.0 &&  maxHeight > 0.0 && minHeight < maxHeight) || (minWeight > 0.0 &&  maxWeight > 0.0 && minWeight<maxWeight )) {
 
-                setContentView(R.layout.activity_main);
-                toolbar = (Toolbar) findViewById(R.id.tool_bar);
-                //setSupportActionBar(toolbar);
 
-                view_reciler =(RecyclerView) findViewById(R.id.Brastlewark_recycler);
-                LinearLayoutManager my_lienarlayout = new LinearLayoutManager(this);
-                my_lienarlayout.setOrientation(LinearLayoutManager.VERTICAL);
-                view_reciler.setLayoutManager(my_lienarlayout);
 
                 JsonParser parser = new JsonParser();
                 JsonObject brastlewarkModel = parser.parse(ClassConstans.Json).getAsJsonObject();
@@ -140,6 +133,7 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
                 for(int i = 0; i< jsonArray.size();i++){
                     BrastlewarkModel Bw =  mGson.fromJson(jsonArray.get(i).toString(), BrastlewarkModel.class);
+
                     if (String.valueOf(Bw.getAge()).toString()!="" && (Bw.getAge() >= minAge && Bw.getAge() <= maxAge ) &&( maxAge > minAge) ) {
                         arrayListBrastlewark.add(Bw);
                         continue;
@@ -156,8 +150,23 @@ public class BrastlewarkFilter extends AppCompatActivity {
 
                 }
                 //MainActivity a= new MainActivity();
-                FilterAdapter mAdapter= new FilterAdapter(this,arrayListBrastlewark);
-                view_reciler.setAdapter(mAdapter);
+                if (arrayListBrastlewark.size()>0) {
+
+                    setContentView(R.layout.activity_main);
+                    toolbar = (Toolbar) findViewById(R.id.tool_bar);
+                    //setSupportActionBar(toolbar);
+
+                    view_reciler =(RecyclerView) findViewById(R.id.Brastlewark_recycler);
+                    LinearLayoutManager my_lienarlayout = new LinearLayoutManager(this);
+                    my_lienarlayout.setOrientation(LinearLayoutManager.VERTICAL);
+                    view_reciler.setLayoutManager(my_lienarlayout);
+                    FilterAdapter mAdapter= new FilterAdapter(this,arrayListBrastlewark);
+                    view_reciler.setAdapter(mAdapter);
+                }
+                else {
+                    Toast.makeText(this,"No existen registros para los criterios seleccionados",Toast.LENGTH_LONG).show();
+                }
+
             }
         else {
             Toast.makeText(this,"Debe ingresar un valor. Ten en cuenta que se requiere ingresar el valor mínimo y máximo del mismo campo",Toast.LENGTH_LONG).show();
